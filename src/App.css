@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.navbar ul li {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .2s ease;
+
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(146, 146, 146, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background: url('../imgs/profile3.jpeg') no-repeat center center/cover; */
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    ;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.headings1 {
+    font-family: 'Tangerine';
+    font-size: 6rem;
+    text-align: center;
+
+}
+
+.headings {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 3%;
+    row-gap: 2%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 325px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(158, 156, 156) 50%, white 50%);
+    background-size: 100% 200%;
+}
+
+.box:hover {
+    background-position: left bottom;
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+    transition: 0.5s ease-in-out;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+.info {
+    text-align: center;
+}
+
+.info .address_link .a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.image {
+    display: block;
+    background-color: rgb(193, 189, 189);
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+}
+
+.contact_details h2 {
+    font-family: 'Lucida Sans';
+    ;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    text-align: center;
+}
+
+.contact-icons {
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact-icons a {
+    margin: 10px;
+    color: rgb(165, 193, 254);
+    font-size: 3rem;
+    align-items: center;
+}
+
+.contact-icons a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 46, 85);
+    border-radius: 10%;
+}
+
+@media screen and (max-width:800px) {
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .headings {
+        font-size: 2.5rem;
+    }
+
+    .headings1 {
+        font-size: 3rem;
+    }
+
+    #contact {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #home {
+        height: 820px;
+    }
+
+    .headings {
+        font-size: 1.5rem;
+    }
+
+    .headings1 {
+        font-size: 2rem;
+    }
+
+    #home .main h3 {
+        font-size: 1rem;
+    }
+}
